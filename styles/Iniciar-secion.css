@@ -120,6 +120,7 @@ html{
 	border:0;
 	outline: none;
 	position: relative;
+	
 }
 #btn
 {
@@ -170,10 +171,21 @@ html{
 	outline: none;
 	border-radius: 30px;
 }
+.submit-btn:hover {
+	box-shadow: 0 0 30px 9px #3ec2ff83;
+
+}
+
 .check-box
 {
 	margin: 30px 10px 34px 0;
 }
+
+.check-box{
+	box-shadow: 0 0 30px 9px #3ec2ff83;
+
+}
+
 span
 {
 	color:rgb(255, 255, 255);

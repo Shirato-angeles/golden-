@@ -1,40 +1,60 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./css/bootstrap.min.css"/>
 
-    <title>Contactanos</title>
-</head>
-<body>
-    <center>
-<p> <font face="Broadway" size="40" color="#401A72"> SERVICIO AL CLIENTE </font face="Broadway" size="40" color="#401A72">
-    <nav class="navbar navbar-expand navbar-dark bg-primary">
-        <ul class="nav navbar-nav">
-            <li class="">
-                <a class="nav-link" href="index.php">¿Quienes somos?</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Reservas.php">Reserva ahora</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Contactanos.php">Contactanos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Registrate.php">Registrate</a>
-            </li>
-        </ul>
-    </nav>
-Recuerda que estos contactos son unicamente para ayuda con la página mas no para generar reservas.
-  <p>
- <a href="https://api.whatsapp.com/send?phone=+573123669750&text=Hola, Necesito ayuda con la página">Envíanos un mensaje de WhatsApp :)</a>
- <img src="wsp.png" width=100 height="100">
-</p>
-</center>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/Contactanos.css" />
+
+        <title>Contactanos</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="#" id="logo">Golden Paradise</a>
+            <nav class="navbar">
+                <a href='../index.html'>Inicio</a>
+                <a href='./Reservas.html'>Reserva Ahora</a>
+                <a href='·'>Quienes Somos</a>
+                <a href='./Contactanos.html'>Contanos</a>
+                <a href="./Iniciar-secion.html" class='loginbtn'
+                    onclick="document.getElementById('login-form').style.display='block'"
+                    style="width:auto;">Registrarse</a>
+            </nav>
+            <div class="icons">
+                <div class="fas fa-user" id="myuser"></div>
+                <div class="fas fa-search" id="serach-bar"></div>
+                <div class="fas fa-bars" id="menu-bars"></div>
+            </div>
+
+            <div class="search-box">
+                <input type="search" placeholder="search here">
+            </div>
+        </header>
+
+        <div class="main-background">
+            <div class="main-text">
+                <h1 class="content">Recuerda que estos contactos son unicamente para ayuda con la
+                    página mas no para generar reservas.</h1>
+                <div id='login-form' class='login-page' method='post' action='../php/login.php'>
+                    <div class="form-box">
+                        <div class='text-box'>
+                            
+                        </div>
+                        <form id='login' class='input-group-login'>
+                            <input type='text' class='input-field' placeholder='Email Id' name="txtusuario" required>
+                            <input type='password' class='input-field' placeholder='Enter Password' name="txtpassword"
+                                required>
+                            <a href="https://api.whatsapp.com/send?phone=+573123669750&text=Hola, Necesito ayuda con la página">Envíanos
+                                un mensaje de WhatsApp :)</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
 </html>

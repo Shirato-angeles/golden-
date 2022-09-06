@@ -12,6 +12,9 @@ if (!$conn){
 
 $nombre = $_POST["txtusuario"];
 $pass = $_POST["txtpassword"];
+$confirmar = $_POST["txtconfirmpass"];
+$nombres = $_POST["txtnombre"];
+$apellidos = $_POST["txtapellido"];
 
 
 $query = mysqli_query("SELECT * FROM iniciar_seccion WHERE usuario = '".$nombre."' and pass = '".$pass."'");
@@ -20,8 +23,8 @@ $nr = mysqli_query_num_rows($query);
 
 if ($nr == 1){
 	//inicio(Location: ../index.html )
-	echo "Biembenido :" .$nombre
-}else if($nr == 0){	
+	echo "Biembenido :" .$nombre  .$apellido
+}else if($nr == 0){
 	echo "No se encontro el usuario";
 
 }

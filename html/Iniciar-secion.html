@@ -33,7 +33,7 @@
     <div class="main-background">
       <div class="main-text">
 
-        <div id='login-form'class='login-page'>
+        <div id='login-form'class='login-page' method='post' action='../php/login.php'>
           <div class="form-box">
               <div class='button-box'>
                   <div id='btn'></div>
@@ -41,19 +41,19 @@
                   <button type='button'onclick='register()'class='toggle-btn'>Register</button>
               </div>
               <form id='login' class='input-group-login'>
-                  <input type='text'class='input-field'placeholder='Email Id' required >
-      <input type='password'class='input-field'placeholder='Enter Password' required>
-      <input type='checkbox'class='check-box'><span>Remember Password</span>
-      <button type='submit'class='submit-btn'>Iniciar Secion</button>
+                  <input type='text'class='input-field'placeholder='Email Id' name="txtusuario" required >
+      <input type='password'class='input-field'placeholder='Enter Password' name="txtpassword" required>
+      <input type='checkbox'class='check-box'><span>Recordar Contraseña</span>
+      <button type='submit'class='submit-btn' value='ingresar'>Iniciar Secion</button>
    </form>
    <form id='register' class='input-group-register'>
-       <input type='text'class='input-field'placeholder='First Name' required>
-       <input type='text'class='input-field'placeholder='Last Name ' required>
+       <input type='text'class='input-field'placeholder='Primer Nombre' required>
+       <input type='text'class='input-field'placeholder='Apellidos ' required>
        <input type='email'class='input-field'placeholder='Email Id' required>
-       <input type='password'class='input-field'placeholder='Enter Password' required>
-       <input type='password'class='input-field'placeholder='Confirm Password'  required>
-       <input type='checkbox'class='check-box'><span>I agree to the terms and                                                   conditions</span>
-                  <button type='submit'class='submit-btn'>Register</button>
+       <input type='password'class='input-field'placeholder=' Contraseña' required>
+       <input type='password'class='input-field'placeholder='Confirmar Contraseña'  required>
+       <input type='checkbox'class='check-box'><span>Estoy de acuerdo con los términos y condiciones                                                  conditions</span>
+                  <button type='submit'class='submit-btn'>Registrarse</button>
          </form>
           </div>
       </div>

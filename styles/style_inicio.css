@@ -20,7 +20,6 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -84,7 +83,7 @@ html{
 .main-background{
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -104,16 +103,44 @@ html{
     -webkit-text-stroke: 2px #fff;
     color: transparent;
 }
-.background-section{
-    background: url(./imgaes/book.jpeg);
+
+.quienes-somos{
+    margin-top:40px;
+    width: 100%;
+    padding: 100px 15%;
+    background : url(../imgaes/quienes.jpeg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    display: block;
+}
+.quienes-somos h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.quienes-somos p{
+    color: #efefef;
+    font-size: 12px;
+}
+
+.quienes-somos h1 span{
+    color: var(--maincolor);
+}
+
+.quienes-somos p{
+    color: rgb(219, 214, 214);
+    font-size: 18px;
+}
+
+.background-section{
+    background: url(../imgaes/footer.jpeg);
+    background-position: cover;
     width: 90%;
     height: 30vh;
     padding-top: 2px;
 
-    
 }
 
 .book-section{
@@ -129,7 +156,7 @@ html{
     display: flex;
     flex:1;
     justify-content: center;
-    padding: 2rem;
+    padding: 10rem;
 }
 .inner-book input{
     padding: 1rem 2rem;
@@ -176,6 +203,22 @@ html{
     font-size: 1.7rem;
     padding: 2rem;
 }
+
+.estrellas{
+    text-align: center;
+    color: #f5f232;
+    font-size: 18px;
+    cursor: pointer;
+}
+.fa-star:hover{
+    color: #94921c;
+    font-size: 26px;
+}
+.fa-star-half-o{
+    color: #f5f232;
+}
+
+
 .inner-award img{
     width: 100%;
 }
@@ -222,20 +265,27 @@ html{
 .book-room-btn{
     width: 50%;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
-    border: 1px solid var(--maincolor);
     text-align: center;
+    background: transparent;
+    border: 2px solid rgb(53, 178, 250);
+    color:#333;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-bottom: 15px;
 }
 .book-room-btn:hover{
     color: white;
-    background: var(--maincolor);
+    box-shadow: 0 0 30px 9px #3ec2ff83;
 }
 .book-room-btn a{
     color: black;
     font-size: 1.7rem;
 }
 .book-room-btn a:hover{
-    color: white;
+    color: #333;
 }
 .second-background{
     background: url(imgaes/secondback.png);
@@ -319,4 +369,95 @@ html{
     .book-section{
         padding: 2rem 0;
     }
+}
+
+.footer{
+    margin-top:40px;
+    width: 100%; 
+    padding: 100px 15%;
+    background: url(../assets/Miami.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #efefef;
+    display: flex;
+    font-size: 12px;
+}
+
+
+.footer div{
+    text-align: center;
+    
+}
+
+.col-2{
+    flex-grow: 2;
+    
+}
+
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col-1 a:hover{
+    color: #324ff5;
+}
+
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 8px;
+    text-align: center;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form button:hover{
+    border: 2px solid #3ec2ff83;
+	box-shadow: 0 0 20px 14px #3ec2ff83;
+
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.social-icons a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ .fa-instagram:hover{
+    color: #af1fa3ef;
+}
+
+.fa-whatsapp:hover{
+    color: #40ce1d;
 }

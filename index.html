@@ -9,23 +9,26 @@
         <link rel="stylesheet" href="./styles/style_inicio.css">
         <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
         <link rel="shortcut icon" href="./imgaes/ mylogo.ico" type="image/x-icon">
+
     </head>
 
     <body>
 
         <header class="header">
-            <a href="#" id="logo"> <img src="./imgaes/mylogo.png"/></a>
+            <a href="#" id="logo"> <img src="./imgaes/mylogo.png" /></a>
             <nav class="navbar">
+                <a href="#"> <i class="fa fa-users"> usuario </i></a>
                 <a href='#'> <i class="fa fa-home"> Inicio</i></a>
-                <a href="#"> <i class="fa fa-building-o"> Hoteles </i></a>
+                <a href="#"> <i class="fa fa-hotel"> Hoteles </i></a>
                 <a href="#"> <i class="fa fa-bed"> Habitaciones </i></a>
                 <a href='#'><i class="fa fa-users"> Quienes Somos </i></a>
-                <a href='footer'> <i class="fa fa-phone"> Contanos </i></a>
-            <!--    <a href="./html/Iniciar-secion.html">Registrarse</a>-->
+                <a href='#'> <i class="fa fa-phone"> Contanos </i></a>
             </nav>
             <div class="icons">
-                <a href="./html/Iniciar-secion.html">
-                <div class="fas fa-user" id="myuser"> </div></a>
+
+                <a href="./php/login.php">
+                    <div class="fas fa-user" id="myuser"> </div>
+                </a>
                 <div class="fas fa-search" id="serach-bar"></div>
                 <div class="fas fa-bars" id="menu-bars"></div>
             </div>
@@ -41,7 +44,7 @@
 
                 <source repeat src="./imgaes/ video.mp4" type="video/mp4">
             </video>
-            <div class="content"> 
+            <div class="content">
                 <h1> Golden Paradise </h1>
             </div>
         </div>
@@ -50,24 +53,30 @@
         <div class="quienes-somos">
             <h1>Quienes <span>Somos</span></h1>
             <p>
-                La industria de viajes, hotelería y turismo, durante los últimos dos años ha decaído en más de un 50%, en todo el mundo.
-                Principalmente en Colombia “ hasta el 15 de marzo se habían aplicado protocolos de emergencia sanitaria para contener o evitar la entrada de personas contagiadas de coronavirus en los aeropuertos internacionales del” [1], con esto podemos concluir que la pandemia tuvo un impacto negativo para la industria de viajes, hotelería y turismo; por lo cual se busca una manera de reactivar este proyecto.
-                GOLDEN PARADISE es una plataforma en la que los usuarios tendrán accesibilidad a todas las aerolíneas y hoteles a nivel nacional, podrán clasificar y dar opinión de su experiencia utilizando el sitio web; de esta manera se busca resurgir esta industria y ayudar a solventar las pedidas debido a la pandemia.
+                La industria de viajes, hotelería y turismo, durante los últimos dos años ha decaído en más de un 50%,
+                en todo el mundo.
+                Principalmente en Colombia “ hasta el 15 de marzo se habían aplicado protocolos de emergencia sanitaria
+                para contener o evitar la entrada de personas contagiadas de coronavirus en los aeropuertos
+                internacionales del” [1], con esto podemos concluir que la pandemia tuvo un impacto negativo para la
+                industria de viajes, hotelería y turismo; por lo cual se busca una manera de reactivar este proyecto.
+                GOLDEN PARADISE es una plataforma en la que los usuarios tendrán accesibilidad a todas las aerolíneas y
+                hoteles a nivel nacional, podrán clasificar y dar opinión de su experiencia utilizando el sitio web; de
+                esta manera se busca resurgir esta industria y ayudar a solventar las pedidas debido a la pandemia.
 
             </p>
         </div>
         <!-- booking secton -->
         <div class="book-section">
             <div class="background-section">
-            <div class="inner-book">
-                <input type="text" placeholder="arrival"> 
-                <input type="text" placeholder="departure">
-                <input type="text" placeholder="choose room">
-                <input type="text" placeholder="state">
-                <div class="book-btn">
-                    <a href="#">Reserva Ahora</a>
+                <div class="inner-book">
+                    <input type="text" placeholder="Llegada">
+                    <input type="text" placeholder="Partida">
+                    <input type="text" placeholder="Numero de habitación">
+                    <input type="text" placeholder="Estado">
+                    <div class="book-btn">
+                        <a href="#">Reserva Ahora</a>
+                    </div>
                 </div>
-            </div>
             </div>
 
         </div>
@@ -79,50 +88,51 @@
                     <img src="imgaes/award1.png" alt="">
                     <h2>GHL Hotel Tequendama </h2>
                     <h3> <i class="fa fa-location-arrow" aria-hidden="true">Hotel centro internacional, Bogotá</i> </h3>
-                    <p>El GHL Hotel Tequendama Bogotá está ubicado en Bogotá, a 1,7 km del Chorro de Quevedo, 
+                    <p>El GHL Hotel Tequendama Bogotá está ubicado en Bogotá, a 1,7 km del Chorro de Quevedo,
                         y ofrece alojamiento, restaurante, aparcamiento privado, centro de fitness y bar...</p>
-                        <div class="estrellas">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="book-room-btn">
-                            <a href="#" class="book-room">Reserva Ahora.</a>
-                        </div>
+                    <div class="estrellas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
                 </div>
                 <div class="inner-award">
                     <img src="imgaes/award 2.png" alt="">
                     <h2>Hotel Habitel Select</h2>
-                    <p>El Hotel Habitel Select se encuentra en Bogotá y ofrece spa, centro de fitness, 
-                        restaurante y habitaciones con wifi gratis y TV de pantalla plana. Se proporciona aparcamiento gratuito...</p>
-                         <div class="estrellas">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="book-room-btn">
-                            <a href="#" class="book-room">Reserva Ahora.</a>
-                        </div>
+                    <p>El Hotel Habitel Select se encuentra en Bogotá y ofrece spa, centro de fitness,
+                        restaurante y habitaciones con wifi gratis y TV de pantalla plana. Se proporciona aparcamiento
+                        gratuito...</p>
+                    <div class="estrellas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
                 </div>
                 <div class="inner-award">
                     <img src="imgaes/award 3.png" alt="">
                     <h2>ibis Bogota Museo</h2>
                     <p>El Hotel Ibis Bogotá Museo está ubicado en Bogotá, en un impresionante edificio situado
-                         a sólo 50 metros del Museo Nacional. Ofrece habitaciones con conexión Wi-Fi gratuita y</p>
-                        <div class="estrellas">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="book-room-btn">
-                            <a href="#" class="book-room">Reserva Ahora.</a>
-                        </div>
+                        a sólo 50 metros del Museo Nacional. Ofrece habitaciones con conexión Wi-Fi gratuita y</p>
+                    <div class="estrellas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
 
                 </div>
                 <div class="inner-award">
@@ -130,55 +140,55 @@
                     <h2>Hilton Garden Inn Bogota Airport </h2>
                     <p>Llenamos el contenido del espacio. De Alta Calidad, Hermoso, Sólido Y Agradable Al Tacto.
                         Muebles Y Decoración De Hormigón? Tú a nosotros.</p>
-                        <div class="estrellas">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                        </div>
-                        <div class="book-room-btn">
-                            <a href="#" class="book-room">Reserva Ahora.</a>
-                        </div>
+                    <div class="estrellas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
 
                 </div>
                 <div class="inner-award">
                     <img src="imgaes/award5.png" alt="">
                     <h2>Radisson Bogota Metrotel</h2>
                     <p>El Metrotel 74 ofrece alojamiento con WiFi gratuita y se encuentra en Bogotá Norte,
-                         a solo 200 metros del distrito financiero central. Limpieza, tipo de habitación y servicio.</p>
-                        <div class="estrellas">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="book-room-btn">
-                            <a href="#" class="book-room">Reserva Ahora.</a>
-                        </div>
+                        a solo 200 metros del distrito financiero central. Limpieza, tipo de habitación y servicio.</p>
+                    <div class="estrellas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
                 </div>
                 <div class="inner-award">
                     <img src="imgaes/award6.png" alt="">
                     <h2>Sur de la ciudad</h2>
                     <p>Llenamos el contenido del espacio. De Alta Calidad, Hermoso, Sólido Y Agradable Al Tacto.
                         Muebles Y Decoración De Hormigón? Tú a nosotros.</p>
-                        <div class="estrellas">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                        </div>
-                        <div class="book-room-btn">
-                            <a href="#" class="book-room">Reserva Ahora.</a>
-                        </div>
+                    <div class="estrellas">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- award winning ended -->
         <!-- roomes -->
         <div class="our-rooms">
-            <h1>Nuestras  <span> habitaciones</span></h1>
+            <h1>Nuestras <span> habitaciones</span></h1>
             <div class="inner-rooms">
                 <div class="room-box">
                     <img src="imgaes/award5.png" alt="">
@@ -219,8 +229,7 @@
                 <a href="#">Sobre nosotros</a>
                 <a href="">Servicios</a>
                 <a href="">Contactanos</a>
-                <a href="">Reservas</a
-                ><a href="">Blog</a>
+                <a href="">Reservas</a><a href="">Blog</a>
             </div>
             <div class="col-2">
                 <h3>CONTACTANOS</h3>
@@ -233,11 +242,9 @@
                 <h3>REDES SOCIALES</h3>
                 <p>La mejor sede de Hoteles en Colombia</p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/ang3l3s_garc1a_/">
-                        <i class="fab fa-instagram fa-4x"></i>
-                    </a>
-                    <a href="https://api.whatsapp.com/send?phone=3123669750&text=Hola, Nececito mas informacion!"> 
-                        <i class='fab fa-whatsapp fa-4x'></i> 
+
+                    <a href="https://api.whatsapp.com/send?phone=3123669750&text=Hola, Nececito mas informacion!">
+                        <i class='fab fa-whatsapp fa-4x'></i>
                     </a>
                 </div>
             </div>

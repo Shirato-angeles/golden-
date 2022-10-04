@@ -30,7 +30,8 @@ if (empty($_SESSION["id"])) {
                 <a href="#main-hotel"> <i class="fa fa-hotel"> Hoteles </i></a>
                 <a href="#room"> <i class="fa fa-bed"> Habitaciones </i></a>
                 <a href='#quienes-somos'><i class="fa fa-users"> Quienes Somos </i></a>
-                <a href='footer'> <i class="fa fa-phone"> Contanos </i></a>
+				<a href="#recervas"> <i class="fa fa-calendar"> Reservaciones</i> </a>
+                <a href='#footer'> <i class="fa fa-phone"> Contanos </i></a>
 
             </nav>
             <div class="icons">
@@ -67,7 +68,7 @@ if (empty($_SESSION["id"])) {
             </p>
         </div>
         <!-- booking secton -->
-        <div class="book-section">
+        <div class="book-section" id="recervas">
             <div class="background-section">
             <div class="inner-book">
                 <input type="text" placeholder="Llegada">
@@ -226,11 +227,11 @@ if (empty($_SESSION["id"])) {
         <div class="footer" id="footer">
             <div class="col-1">
                 <h3>GOLDEN PARADISE</h3>
-                <a href="#">Sobre nosotros</a>
-                <a href="">Servicios</a>
-                <a href="">Contactanos</a>
-                <a href="">Reservas</a
-                ><a href="">Blog</a>
+                <a href="#sobre-nosotros">Sobre nosotros</a>
+                <a href="room">Servicios</a>
+                <a href="#footer">Contactanos</a>
+                <a href="#recervas">Reservas</a
+                ><a href="#">Blog</a>
             </div>
             <div class="col-2">
                 <h3>CONTACTANOS</h3>

@@ -68,16 +68,25 @@ if (empty($_SESSION["id"])) {
             </p>
         </div>
         <!-- booking secton -->
+        
         <div class="book-section" id="recervas">
+        <?php
+      include  "./controlador_recervas.php";
+		?>
             <div class="background-section">
             <div class="inner-book">
-                <input type="text" placeholder="Llegada">
-                <input type="text" placeholder="Partida">
-                <input type="text" placeholder="Numero de habitación">
-                <input type="text" placeholder="Estado">
+                <form action="index.php" method="post">
+                <input type="date" name = "llegada" placeholder="Llegada">
+                <input type="date" name = "partida" placeholder="Partida">
+                <input type="number" name = "habitacion" placeholder="Numero de habitación">
+                <input type="text" name = "estado" placeholder="Estado">
+                <input type="number" name = "adultos" placeholder="Adultos">
+                <input type="number" name = "ninos" placeholder="Niños">
+
                 <div class="book-btn">
-                    <a href="#">Reserva Ahora</a>
+                    <button  value='ingresar' name="btnrecervar">Reserva Ahora</button>
                 </div>
+                </form>
             </div>
             </div>
 
@@ -200,9 +209,39 @@ if (empty($_SESSION["id"])) {
                         <a href="#" class="book-room">Reserva Ahora.</a>
                     </div>
                 </div>
+                
+                <div class="room-box">
+                    <img src="../imgaes/award9.png" alt="">
+                    <div class="beds">
+                        <span>3 Cama</span><i class="fas fa-bed"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
+                </div>
+
+                <div class="room-box">
+                    <img src="../imgaes/award8.png" alt="">
+                    <div class="beds">
+                        <span>3 Cama</span><i class="fas fa-bed"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
+                </div>
 
                 <div class="room-box">
                     <img src="../imgaes/award4.png" alt="">
+                    <div class="beds">
+                        <span>3 Cama</span><i class="fas fa-bed"></i>
+                    </div>
+                    <div class="book-room-btn">
+                        <a href="#" class="book-room">Reserva Ahora.</a>
+                    </div>
+                </div>
+
+                <div class="room-box">
+                    <img src="../imgaes/award7.png" alt="">
                     <div class="beds">
                         <span>3 Cama</span><i class="fas fa-bed"></i>
                     </div>
@@ -253,7 +292,7 @@ if (empty($_SESSION["id"])) {
         </div>
         <!--Footer-->
 
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </body>
 
 </html>

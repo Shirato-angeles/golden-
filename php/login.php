@@ -3,6 +3,7 @@ require 'database.php';
 
 
 
+
 ?>
 
 
@@ -13,7 +14,9 @@ require 'database.php';
     <meta charset="UTF-8">
     <title>Iniciar Secion</title>
     <link rel="stylesheet" href="../styles/Iniciar-secion.css">
-    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="shortcut icon" href="../imgaes/ mylogo.ico" type="image/x-icon">
+
     <!---we had linked our css file----->
   </head>
 
@@ -42,7 +45,8 @@ require 'database.php';
       <div class="main-text">
 		<div>
 			<?php
-			include "./controlador_login.php"
+			include "./controlador_login.php";
+      include  "./controlador_registrar.php";
 		?>
 		</div>
         <div id='login-form'class='login-page' method='post' action='../php/login.php'>
@@ -58,14 +62,14 @@ require 'database.php';
       <input type='checkbox'class='check-box'><span>Recordar Contraseña</span>
       <button type='submit'class='submit-btn' value='ingresar' name='btningresar' >Iniciar Secion</button>
    </form>
-   <form id='register' class='input-group-register'>
+   <form id='register' method='post' action= "login.php" class='input-group-register'>
        <input type='text'class='input-field'placeholder='Primer Nombre'  name='nombre' required>
        <input type='text'class='input-field'placeholder='Apellidos ' name='apellido' required>
-       <input type='email'class='input-field'placeholder='Email Id' name='usuario' required>
+       <input type='text'class='input-field'placeholder='Email Id / usuario' name='usuario' >
        <input type='password'class='input-field'placeholder=' Contraseña' name='password' required>
        <input type='password'class='input-field'placeholder='Confirmar Contraseña' name='confirmpassword'  required>
        <input type='checkbox'class='check-box'><span>Estoy de acuerdo con los términos y condiciones                                                  conditions</span>
-                  <button type='submit'class='submit-btn'  value="registrar">Registrarse</button>
+                  <button type='submit'class='submit-btn' name='btnregistrar'  value="registrar">Registrarse</button>
          </form>
           </div>
       </div>

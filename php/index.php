@@ -1,10 +1,5 @@
 <?php
 
-session_start();
-
-if (empty($_SESSION["id"])) {
-	header('location: login.php');
-}
 
 ?>
 
@@ -36,7 +31,7 @@ if (empty($_SESSION["id"])) {
             </nav>
             <div class="icons">
                 <a href="controlador_cerrarSeccion.php">
-                <div class="fas fa-user" id="myuser"><?php echo $_SESSION['nombre']. $_SESSION['apellido'] ?> </div></a>
+                <div class="fas fa-user" id="myuser"> </div></a>
                 <div class="fas fa-search" id="serach-bar"></div>
                 <div class="fas fa-bars" id="menu-bars"></div>
             </div>

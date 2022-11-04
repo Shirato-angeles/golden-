@@ -130,7 +130,7 @@ html{
     margin-top:40px;
     width: 100%;
     padding: 100px 15%;
-    background : url(../imgaes/quienes.jpeg);
+    background : url(../../imgaes/quienes.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -157,7 +157,7 @@ html{
 }
 
 .background-section{
-    background: url(../imgaes/footer.jpeg);
+    background: url(../../imgaes/footer.jpeg);
     background-position: cover;
     width: 90%;
     height: 40vh;
@@ -310,7 +310,7 @@ html{
     color: #333;
 }
 .second-background{
-    background: url(imgaes/secondback.png);
+    background: url(../../imgaes/secondback.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -397,7 +397,7 @@ html{
     margin-top:40px;
     width: 100%; 
     padding: 100px 15%;
-    background: url(../imgaes/fernando-alvarez-rodriguez-M7GddPqJowg-unsplash.jpg);
+    background: url(../../imgaes/fernando-alvarez-rodriguez-M7GddPqJowg-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     color: #efefef;

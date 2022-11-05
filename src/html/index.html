@@ -9,6 +9,10 @@
         <link rel="stylesheet" href="../styles/style_inicio.css">
         <link rel="stylesheet" href="../../fontawesome-free-5.15.3-web/css/all.min.css">
         <link rel="shortcut icon" href="../../imgaes/ mylogo.ico" type="image/x-icon">
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script src="../../database/firebase.js" type="module"></script>
     </head>
 
     <body>
@@ -69,21 +73,24 @@
 
             <div class="background-section">
                 <div class="inner-book">
-                    <form action="index.php" method="post">
-                        <input type="date" name="llegada" placeholder="Llegada">
-                        <input type="date" name="partida" placeholder="Partida">
-                        <input type="number" name="habitacion" placeholder="Numero de habitación">
-                        <input type="text" name="estado" placeholder="Estado">
-                        <input type="number" name="adultos" placeholder="Adultos">
-                        <input type="number" name="ninos" placeholder="Niños">
+                    <form id="recerva-form">
+                        <input type="date" id="llegada" placeholder="Llegada">
+                        <input type="date" id="partida" placeholder="Partida">
+                        <input type="number" id="habitacion" placeholder="Numero de habitación">
+                        <input type="text" id="tipo" placeholder="Tipo de Habitacion">
+                        <input type="number" id="adultos" placeholder="Adultos">
+                        <input type="number" id="ninos" placeholder="Niños">
 
                         <div class="book-btn">
-                            <button value='ingresar' name="btnrecervar">Reserva Ahora</button>
+                            <button value='ingresar' id="btn-recervar">Reserva Ahora</button>
                         </div>
                     </form>
                 </div>
             </div>
 
+        </div>
+        <div id="recerva-container">
+            
         </div>
         <!-- booking secton ended -->
         <div class="award-winning-hotel">
@@ -252,7 +259,7 @@
                     </div>
 
                     <div class="book-room-btn">
-                        <a href="#" class="book-room">Reserva Ahora.</a>
+                        <a href="#" onclick="Reserva()" class="book-room">Reserva Ahora.</a>
                     </div>
                 </div>
             </div>
@@ -286,7 +293,7 @@
         </div>
         <!--Footer-->
 
-        <script src="../script.js"></script>
+        <script src="../js/main.js" type="module"></script>
     </body>
 
 </html>

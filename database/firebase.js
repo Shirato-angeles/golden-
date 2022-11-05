@@ -21,8 +21,9 @@ const firebaseConfig = {
   projectId: "golden-a0b91",
   storageBucket: "golden-a0b91.appspot.com",
   messagingSenderId: "1055118771266",
-  appId: "1:1055118771266:web:666c0c99c23120335519db",
+  appId: "1:1055118771266:web:656a8fd482ffad605519db"
 };
+
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
@@ -31,47 +32,24 @@ export const db = getFirestore();
 
 /**
  * Save a New Task in Firestore
- * @param {string} habitacion the title of the Task
- * @param {string} llegada the llegada of the Task
- * @param {string} partida
- * @param {string} number
- * @param {string} tipo
- * @param {string} adultos
- * @param {string} ninos
+ * @param {string} title the title of the Task
+ * @param {string} description the description of the Task
  */
-export const saveReceva = (
-  habitacion,
-  llegada,
-  partida,
-  tipo,
-  adultos,
-  ninos,
-  number
-) =>
-  addDoc(collection(db, "Recervaciones"), {
-    habitacion,
-    llegada,
-    partida,
-    tipo,
-    adultos,
-    ninos,
-    number
-  });
+export const saveTask = (title, description) =>
+  addDoc(collection(db, "Recervacion"), { title, description });
 
-export const onGetRecervas = (callback) =>
-  onSnapshot(collection(db, "Recervaciones"), callback);
+export const onGetTasks = (callback) =>
+  onSnapshot(collection(db, "Recervacion"), callback);
 
 /**
  *
- * @param {string} id Recerva ID
+ * @param {string} id Task ID
  */
+export const deleteTask = (id) => deleteDoc(doc(db, "Recervacion", id));
 
- export const deleteRecervas = (id) => deleteDoc(doc(db, "Recervaciones", id));
+export const getTask = (id) => getDoc(doc(db, "Recervacion", id));
 
- export const getRecervas = (id) => getDoc(doc(db, "Recervaciones", id));
- 
- export const updateRecervas = (id, newFields) =>
-   updateDoc(doc(db, "Recervaciones", id), newFields);
- 
- export const getRecervaciones = () => getDocs(collection(db, "Recervaciones"));
- 
+export const updateTask = (id, newFields) =>
+  updateDoc(doc(db, "Recervacion", id), newFields);
+
+export const getTasks = () => getDocs(collection(db, "Recervacion"));

@@ -26,11 +26,12 @@
           style="width:auto;">Registrarse</a>
       </nav>
       <div class="icons">
-        <div class="fas fa-user"  onclick="document.getElementById('login-form').style.display='block'" id="myuser"></div>
+        <div class="fas fa-user" onclick="document.getElementById('login-form').style.display='block'" id="myuser">
+        </div>
 
-      <div class="search-box">
-        <input type="search" placeholder="search here">
-      </div>
+        <div class="search-box">
+          <input type="search" placeholder="search here">
+        </div>
     </header>
 
     <div class="main-background">
@@ -46,30 +47,30 @@
               <button type='button' onclick='register()' class='toggle-btn'>Registrar</button>
             </div>
             <form id='login' class='input-group-login'>
+              <input type='text' class='input-field' placeholder='Primer Nombre' id='full_name' required>
               <input type='text' class='input-field' placeholder='Email Id' id="email" required>
-              <input type='password' class='input-field' placeholder='Contraseña' id="pws" required>
+              <input type='password' class='input-field' placeholder='Contraseña' id="password" required>
               <input type='checkbox' class='check-box'><span>Recordar Contraseña</span>
-              <button type='submit' class='submit-btn'>Iniciar Secion</button>
+              <button type='submit' class='submit-btn' onclick="login()">Iniciar Secion</button>
             </form>
             <form id='register' class='input-group-register'>
-              <input type='text' class='input-field' placeholder='Primer Nombre' id='nombre' required>
-              <input type='text' class='input-field' placeholder='Apellidos ' id='apellido' required>
-              <input type='text' class='input-field' placeholder='Email Id / usuario' id='email>
-              <input type='password' class='input-field' placeholder=' Contraseña' id='pws' required>
-              <input type='password' class='input-field' placeholder='Confirmar Contraseña' id='confirmpassword'
-                required>
+              <input type="text" id="full_name" placeholder="Full name">
+              <input type='text' class='input-field' placeholder='Apellidos ' id='full_lastname' required>
+              <input type='text' class='input-field' placeholder='Email Id / usuario' id='email'>
+              <input type='password' class='input-field' placeholder='Contraseña' id="passwords" required>
               <input type='checkbox' class='check-box'><span>Estoy de acuerdo con los términos y condiciones
                 conditions</span>
-              <button type='submit' class='submit-btn' id="submitData" name="submitData">Registrarse</button>
+              <button type='submit' class='submit-btn' onclick=" register()" 
+              >Registrarse</button>
             </form>
           </div>
         </div>
       </div>
     </div>
     <script>
-      var x = document.getElementById('login');
-      var y = document.getElementById('register');
-      var z = document.getElementById('btn');
+      const x = document.getElementById('login');
+      const y = document.getElementById('register');
+      const z = document.getElementById('btn');
       function register() {
         x.style.left = '-400px';
         y.style.left = '50px';
@@ -82,13 +83,22 @@
       }
     </script>
     <script>
-      var modal = document.getElementById('login-form');
+      const modal = document.getElementById('login-form');
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "block";
         }
       }
     </script>
+
   </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="../js/login.js"></script>
 
 </html>

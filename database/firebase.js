@@ -14,13 +14,6 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut
-} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 
 // Your web app's Firebase configuration
@@ -68,5 +61,3 @@ export const updateTask = (id, newFields) =>
 export const getTasks = () => getDocs(collection(db, "Recervacion"));
 
 
-export const auth = getAuth();
-const database = getDatabase(app);

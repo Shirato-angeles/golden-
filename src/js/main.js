@@ -25,33 +25,65 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       const task = doc.data();
 
       tasksContainer.innerHTML += `
-		<div class="award-winning-hotel">
-		<h1> lista de Recervaciones</h1>
-		<div class="book-section2">
-			<th>
-				<tl style="margin-left: 5px; margin-right:10px; font-size:25px;">llegada a Hotel<br /> ${task.llegada}
-				</tl>
-				<tl style="margin-left: 0px; margin-right:10px; font-size:25px;">Salida del Hotel <br /> ${task.partida}
-				</tl>
-				<tl style="margin-left: 0px; margin-right:10px; font-size:25px;">Numero de Habitación <br />
-					${task.number}</tl>
-				<tl style="margin-left: 0px; margin-right:10px; font-size:25px;">Tipo de Habitación <br /> ${task.habitacion}
-				</tl>
-				<tl style="margin-left: 0px; margin-right:10px; font-size:25px;">Numero de Adultos <br /> ${task.adultos}
-				</tl>
-				<tl style="margin-left: 0px; margin-right:10px; font-size:25px;">Numero de Niños <br /> ${task.ninos}
-				</tl>
-			</th>
-		</div>
-	</div>
-		<button class="btn btn-primary btn-delete" data-id="${doc.id}">
-		  🗑 Delete
-		</button>
-		<button class="btn btn-secondary btn-edit" data-id="${doc.id}">
-		  🖉 Edit
-		</button>
+	  <div class="award-winning-hotel">
+	  <h1> Recervaciones <span>Activas</span> </h1>
+	  <div class="book-section2">
+		  <table>
+			  <tr>
+				  <th style="color:#035b5b; font-size: 28px;">Llegada al Hotel</th>
+				  <th style="color:#035b5b; font-size: 28px; ">Salida del Hotel</th>
+				  <th style="color:#035b5b; font-size: 28px; ">Habitacion</th>
+				  <th style="color:#035b5b; font-size: 28px; ">Numero de Habitación</th>
+				  <th style="color:#035b5b; font-size: 28px; ">tipo de Habitación</th>
+				  <th style="color:#035b5b; font-size: 28px; ">Adultos</th>
+				  <th style="color:#035b5b; font-size: 28px; ">Niños</th>
+			  </tr>
+			  <tr>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+			  </tr>
+			  <tr>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+			  </tr>
+			  <tr style=" margin-top: 10px;">
+				  <td style="color:#d3d2d2; font-size: 24px;  margin-top: 10px;"> ${task.llegada}</td>
+				  <td style="color:#d3d2d2; font-size: 24px; margin-left: 10px; "> ${task.partida}</td>
+				  <td style="color:#d3d2d2; font-size: 24px; margin-left: 10px; "> ${task.habitacion}</td>
+				  <td style="color:#d3d2d2; font-size: 24px;  margin-left: 10px;"> ${task.habitacion}</td>
+				  <td style="color:#d3d2d2; font-size: 24px;  margin-left: 10px;"> ${task.tipo}</td>
+				  <td style="color:#d3d2d2; font-size: 24px;  margin-left: 10px;"> ${task.adultos}</td>
+				  <td style="color:#d3d2d2; font-size: 24px; margin-left: 10px;"> ${task.ninos}</td>
+
+			  </tr>
+		  </table>
+		  <div class="book-btn">
+			  <button style=" padding: 1.1rem ;
+							  margin-right: 290px;
+							  margin-top: 40px;
+							  margin-bottom: -30;
+							  border-radius:23px;
+							  background: transparent;
+							  color:rgb(202, 199, 199);
+							  font-weight:bold; font-size:
+							  24px; border: none;
+							  cursor: pointer;" data-id="${doc.id}">
+				  🗑 Eliminar Recervaciones
+			  </button>
+		  </div>
 	  </div>
-	</div>`;
+
+  </div>`;
     });
 
     const btnsDelete = tasksContainer.querySelectorAll(".btn-delete");

@@ -4,6 +4,7 @@ import {
   deleteTask,
   getTask,
   updateTask,
+  auth
 } from "../../database/firebase.js";
 
 const taskForm = document.getElementById("task-form");
@@ -13,10 +14,8 @@ let editStatus = false;
 let id = "";
 
 window.addEventListener("DOMContentLoaded", async (e) => {
-  // const querySnapshot = await getTasks();
-  // querySnapshot.forEach((doc) => {
-  //   console.log(doc.data());
-  // });
+ 
+   });
 
   onGetTasks((querySnapshot) => {
     tasksContainer.innerHTML = "";
@@ -120,7 +119,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       });
     });
   });
-});
+
 
 taskForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -165,3 +164,76 @@ taskForm.addEventListener("submit", async (e) => {
     console.log(error);
   }
 });
+
+
+
+/*----------------------------------------------------------------*/
+
+
+submitData.addEventListener('click', (e) => {
+
+	const email = document.getElementById('email').value;
+	const password = document.getElementById('pws').value;
+
+	//sign up user
+	createUserWithEmailAndPassword(auth, email, password)
+		.then((userCredential) => {
+			// Signed in
+			const user = userCredential.user;
+			// ... user.uid
+			set(ref(database, 'users/' + user.uid), {
+				email: email,
+				password: password
+			})
+				.then(() => {
+					// Data saved successfully!
+					alert('user created successfully');
+
+				})
+				.catch((error) => {
+					// The write failed...
+					alert(error);
+				});
+		})
+		.catch((error) => {
+			const errorMessage = error.message;
+			// ..
+			alert(errorMessage);
+		});
+
+	// log in user
+	signInWithEmailAndPassword(auth, email, password)
+		.then((userCredential) => {
+			// Signed in
+			const user = userCredential.user;
+			// ...
+
+			// save log in details into real time database
+			const lgDate = new Date();
+			update(ref(database, 'users/' + user.uid), {
+				last_login: lgDate,
+			})
+				.then(() => {
+					// Data saved successfully!
+					alert('user logged in successfully');
+
+				})
+				.catch((error) => {
+					// The write failed...
+					alert(error);
+				});
+		})
+		.catch((error) => {
+			const errorMessage = error.message;
+			alert(errorMessage);
+		});
+
+   // sign out user
+	signOut(auth).then(() => {
+		// Sign-out successful.
+	}).catch((error) => {
+		// An error happened.
+	});
+});
+
+

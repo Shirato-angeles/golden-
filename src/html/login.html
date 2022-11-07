@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Iniciar Secion</title>
     <link rel="stylesheet" href="../styles/Iniciar-secion.css">
-    <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.min.css">
-    <link rel="shortcut icon" href="../imgaes/ mylogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="shortcut icon" href="../../imgaes/ mylogo.ico" type="image/x-icon">
     <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
     <!---we had linked our css file----->
@@ -26,10 +26,7 @@
           style="width:auto;">Registrarse</a>
       </nav>
       <div class="icons">
-        <div class="fas fa-user" id="myuser"></div>
-        <div class="fas fa-search" id="serach-bar"></div>
-        <div class="fas fa-bars" id="menu-bars"></div>
-      </div>
+        <div class="fas fa-user"  onclick="document.getElementById('login-form').style.display='block'" id="myuser"></div>
 
       <div class="search-box">
         <input type="search" placeholder="search here">
@@ -41,29 +38,29 @@
         <div>
 
         </div>
-        <div id='login-form' class='login-page' method='post' action='../php/login.php'>
+        <div id='login-form' class='login-page'>
           <div class="form-box">
             <div class='button-box'>
               <div id='btn'></div>
               <button type='button' onclick='login()' class='toggle-btn'>Iniciar </button>
               <button type='button' onclick='register()' class='toggle-btn'>Registrar</button>
             </div>
-            <form id='login' class='input-group-login' action='login.php' method='post'>
-              <input type='text' class='input-field' placeholder='Email Id' name="usuario" required>
-              <input type='password' class='input-field' placeholder='Contraseña' name="password" required>
+            <form id='login' class='input-group-login'>
+              <input type='text' class='input-field' placeholder='Email Id' id="email" required>
+              <input type='password' class='input-field' placeholder='Contraseña' id="pws" required>
               <input type='checkbox' class='check-box'><span>Recordar Contraseña</span>
-              <button type='submit' class='submit-btn' value='ingresar' name='btningresar'>Iniciar Secion</button>
+              <button type='submit' class='submit-btn'>Iniciar Secion</button>
             </form>
-            <form id='register' method='post' action="login.php" class='input-group-register'>
-              <input type='text' class='input-field' placeholder='Primer Nombre' name='nombre' required>
-              <input type='text' class='input-field' placeholder='Apellidos ' name='apellido' required>
-              <input type='text' class='input-field' placeholder='Email Id / usuario' name='usuario'>
-              <input type='password' class='input-field' placeholder=' Contraseña' name='password' required>
-              <input type='password' class='input-field' placeholder='Confirmar Contraseña' name='confirmpassword'
+            <form id='register' class='input-group-register'>
+              <input type='text' class='input-field' placeholder='Primer Nombre' id='nombre' required>
+              <input type='text' class='input-field' placeholder='Apellidos ' id='apellido' required>
+              <input type='text' class='input-field' placeholder='Email Id / usuario' id='email>
+              <input type='password' class='input-field' placeholder=' Contraseña' id='pws' required>
+              <input type='password' class='input-field' placeholder='Confirmar Contraseña' id='confirmpassword'
                 required>
               <input type='checkbox' class='check-box'><span>Estoy de acuerdo con los términos y condiciones
                 conditions</span>
-              <button type='submit' class='submit-btn' name='btnregistrar' value="registrar">Registrarse</button>
+              <button type='submit' class='submit-btn' id="submitData" name="submitData">Registrarse</button>
             </form>
           </div>
         </div>
